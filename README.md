@@ -1,2 +1,2 @@
 # juankz-repo1-<img width="814" height="513" alt="image" src="https://github.com/user-attachments/assets/12771092-beae-4bc7-a5bf-d86b326f6ba0" /><img width="1911" height="1055" alt="image2" src="https://github.com/user-attachments/assets/31a498f8-60ab-4fd6-a7cd-0986f64830a4" />
-
+elegi el modo de red interna porque me permite mantener la maquina virtual aislada y que solo se pueda comunicar con otras maquinas virtuales de la misma red, esto me parece adecuado para hacer las pruebas de una forma mas controlada, no elegi el modo puente porque la maquina virtual estaria conectada directamente a la red y tendria menos aislamiento, por eso para esta practica preferi usar red interna
