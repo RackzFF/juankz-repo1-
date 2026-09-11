@@ -1,19 +1,26 @@
 # juankz-repo1-
 
-## Red
+## red
 
-Para esta practica configure la maquina virtual en modo **Red Interna** (Internal Network) en VirtualBox,
+para esta practica configure la maquina virtual en modo **red interna (internal network)** en virtualbox.
 
-![Configuracion de red](https://github.com/user-attachments/assets/12771092-beae-4bc7-a5bf-d86b326f6ba0)
+![configuracion de red](https://github.com/user-attachments/assets/12771092-beae-4bc7-a5bf-d86b326f6ba0)
 
-## Justificacion
+## justificacion
 
-Elegi el modo **Red Interna** porque me permite mantener la maquina virtual aislada, de forma que solo pueda comunicarse con otras VMs conectadas a esa misma red interna, sin acceso a la red domestica ni a Internet, Esto reduce significativamente la **superficie de ataque**, ya que la VM no queda expuesta a otros dispositivos de mi red local ni es alcanzable desde el exterior, Ademas, este modo permite una **segmentacion de red** clara entre el entorno de pruebas y el resto de mi infraestructura, lo cual es una buena practica de seguridad al trabajar con maquinas virtuales que puedan usarse para pruebas o analisis,
+elegi el modo **red interna** porque permite que la maquina virtual se mantenga aislada y solo pueda comunicarse con otras maquinas virtuales que esten conectadas a la misma red interna. de esta forma, la vm no tiene acceso a internet ni a la red domestica.
 
-Descarte el modo **Puente (Bridged)** porque conecta la VM directamente a la red fisica, dandole una IP visible dentro de mi red domestica y reduciendo el aislamiento, Tambien descarte **Solo-Anfitrion (Host-Only)** porque, si bien aisla la VM de la red externa igual que Red Interna, permite la comunicacion directa con el Host, lo cual no era necesario para esta practica y hubiera ampliado innecesariamente la superficie de contacto entre la VM y mi maquina fisica, Por estos motivos, Red Interna fue la opcion que mejor equilibraba aislamiento y funcionalidad para el ejercicio,
+esto ayuda a reducir la **superficie de ataque**, por que la maquina virtual no queda expuesta a los dispositvios de mi red ni a otras conexiones , ademas separa la parte de pruebas del resto de la red, cosa que es una buena forma de asegurarse trabajando con las vm
 
-## Snapshots
+descarte el modo **puente (bridged)** porque conecta la vm directamente a la red fisica. esto haria que la vm tenga una ip dentro de mi red domestica y tendria un menor nivel de aislamiento.
 
-Tome una instantanea llamada **"Instalacion Base Limpia"** una vez instalado el sistema operativo y antes de realizar cualquier configuracion adicional, La VM estaba **apagada** en el momento de tomar el snapshot, para asegurar un estado consistente y evitar inconsistencias de disco o memoria,
+tambien descarte el modo **solo-anfitrion (host-only)** porque, aunque mantiene a la vm aislada de internet y de la red externa, permite que se comunique directamente con el equipo anfitrion, para esta practica esa comunicacion no era necesaria, por lo que preferi mantener un aislamiento mayor
 
-![Snapshot Instalacion Base Limpia](https://github.com/user-attachments/assets/31a498f8-60ab-4fd6-a7cd-0986f64830a4)
+por estos motivos, elegi **red interna**, ya que era la opcion que mejor se adaptaba a lo que necesitaba
+
+## snapshots
+
+tome una instantanea llamada **"instalacion base limpia"**
+la maquina virtual estaba **apagada** al momento de crear el snapshot, para guardar un estado limpio y estable de la vm y poder volver a ese punto en caso de ser necesario.
+
+![snapshot instalacion base limpia](https://github.com/user-attachments/assets/31a498f8-60ab-4fd6-a7cd-0986f64830a4)
